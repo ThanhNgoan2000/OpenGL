@@ -1,0 +1,23 @@
+package lab3_VideoRental;
+
+public class Movie {
+	private boolean available;
+	private String title;
+	private PriceStrategy price;
+	public Movie(boolean available, String title, PriceStrategy price) {
+		super();
+		this.available = available;
+		this.title = title;
+		this.price = price;
+	}
+	public boolean isAvailable() {
+		return available;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public PriceStrategy getPrice() {
+		return price;
+	}
+	
+}

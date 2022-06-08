@@ -1,0 +1,70 @@
+package lab2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ResidentalCustomer extends Customer {
+	private List<OneReadings> readingLists = new ArrayList<OneReadings>();
+
+	public ResidentalCustomer(String id, String name, String address, List<OneReadings> readingLists) {
+		super(id, name, address);
+		this.readingLists = readingLists;
+	}
+
+	public ResidentalCustomer(String id, String name, String address) {
+		super(id, name, address);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Readings getOldReadings() {
+		// TODO Auto-generated method stub
+		return readingLists.get(readingLists.size() - 2);
+	}
+
+	@Override
+	public Readings getNewReadings() {
+		// TODO Auto-generated method stub
+		return readingLists.get(readingLists.size() - 1);
+	}
+
+	@Override
+	public double charge() {
+		// TODO Auto-generated method stub
+		long totalIndex = getNewReadings().getIndexNum() - getOldReadings().getIndexNum();
+		double totalCharge = 0;
+		if (totalIndex < 100) {
+			totalCharge += totalIndex * 550;
+		} else if (totalIndex < 150) {
+			totalCharge = 100 * 550 + (totalIndex - 100) * 900;
+		} else if (totalIndex < 200) {
+			totalCharge = 100 * 550 +50*900+(totalIndex - 150) * 1210;
+		} else if (totalIndex < 300) {
+			totalCharge = 100 * 550 +50*900+50*1210+ (totalIndex - 200) * 1340;
+		} else if (totalIndex > 300) {
+			totalCharge = 100 * 550 +50*900+50*1210+100*1340+ (totalIndex - 300) * 1400;
+		}
+		return totalCharge;
+	}
+	public static double charge(long totalIndex) {
+		// TODO Auto-generated method stub
+//		long totalIndex = getNewReadings().getIndexNum() - getOldReadings().getIndexNum();
+//		long totalIndex = newReading - oldReading;
+		double totalCharge = 0;
+		if (totalIndex < 100) {
+			totalCharge += totalIndex * 550;
+		} else if (totalIndex < 150) {
+			totalCharge = 100 * 550 + (totalIndex - 100) * 900;
+		} else if (totalIndex < 200) {
+			totalCharge = 100 * 550 +50*900+(totalIndex - 150) * 1210;
+		} else if (totalIndex < 300) {
+			totalCharge = 100 * 550 +50*900+50*1210+ (totalIndex - 200) * 1340;
+		} else if (totalIndex > 300) {
+			totalCharge = 100 * 550 +50*900+50*1210+100*1340+ (totalIndex - 300) * 1400;
+		}
+		return totalCharge;
+	}
+public static void main(String[] args) {
+charge(301);
+}
+}

@@ -1,0 +1,19 @@
+package lab3_VideoRental;
+
+public class RegularPrice implements PriceStrategy{
+
+	@Override
+	public double getCharge(int rentDays) {
+		// TODO Auto-generated method stub
+		double result = 0;
+		if()
+		return result;
+	}
+
+	@Override
+	public double getFrequentRenterPoints(int rentDays) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

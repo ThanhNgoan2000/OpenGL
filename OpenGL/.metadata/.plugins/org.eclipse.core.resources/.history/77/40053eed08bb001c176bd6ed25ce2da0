@@ -1,0 +1,73 @@
+package chuong1;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class DirectedGraph extends Graph{
+
+	Map<Integer, List<Integer>> adjList = null;
+	  public DirectedGraph() {
+		// TODO Auto-generated constructor stub
+		  adjList = new HashMap<Integer, List<Integer>>();
+	}
+
+	@Override
+	public void addEdge(Integer u, Integer v) {
+		// TODO Auto-generated method stub
+		if(!adjList.containsKey(u)) {
+			adjList.put(u, new ArrayList<Integer>());
+		}
+		if(!adjList.get(u).contains(v)) {
+			adjList.get(u).add(v);
+		}
+	}
+
+	@Override
+	public void removeEdge(Integer u, Integer v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void printAdjList() {
+		// TODO Auto-generated method stub
+		Set<Integer> keyset = adjList.keySet();
+		for (Integer key : keyset) {
+			System.out.println(key+":"+ adjList.get(key));
+		}
+	}
+
+	@Override
+	public int degree(Integer u) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public int inDegree() {
+		return 0;
+	}
+	public int outDegree() {
+		return 0;
+	}
+	@Override
+	public int numOfEdge() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+public static void main(String[] args) {
+	DirectedGraph G1 = new DirectedGraph();
+	G1.addEdge(1, 2);
+	G1.addEdge(3, 1);
+	G1.addEdge(1, 4);
+	G1.addEdge(2, 4);
+	G1.addEdge(3, 2);
+	G1.addEdge(3, 5);
+	G1.addEdge(4, 5);
+	G1.addEdge(5, 1);
+	G1.addEdge(5, 3);
+	G1.addEdge(2, 5);
+	G1.printAdjList();
+}
+}

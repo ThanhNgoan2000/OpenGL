@@ -1,0 +1,35 @@
+package lab3_VideoRental;
+
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
+public class RentItems {
+  private Movie movie;
+  private Date startDate;
+  public RentItems() {
+	// TODO Auto-generated constructor stub
+}
+public RentItems(Movie movie, Date startDate) {
+	super();
+	this.movie = movie;
+	this.startDate = startDate;
+}
+public Movie getMovie() {
+	return movie;
+}
+public Date getStartDate() {
+	return startDate;
+}
+  public int getRentDay() {
+	  LocalDate lDate = LocalDate.now();
+	  Date nDate = Date.from(lDate.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+	  Date rDate = getStartDate();
+	  long diff = nDate.getTime()-rDate.getTime();
+	  int numberDay = (int) (diff / (24 * 60 * 60 * 1000));
+	  return numberDay;
+  }
+public double getCharge() {
+	movie.
+}
+}

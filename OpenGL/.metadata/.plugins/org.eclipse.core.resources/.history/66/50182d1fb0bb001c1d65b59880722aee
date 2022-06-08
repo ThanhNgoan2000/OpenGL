@@ -1,0 +1,19 @@
+package adjacencyMatrix;
+
+public class UnDirectedGraph {
+   private int[][] matrix ;
+   public UnDirectedGraph() {
+   }
+   public void addEdge(Integer u, Integer v) {
+	   matrix[u][v]++;
+	   matrix[v][u]++;
+   }
+   public int degree(Integer u) {
+	   int degree = 0;
+	   for (int i = 0; i < matrix.length; i++) {
+		degree+=matrix[u][i];
+	}
+	   return degree;
+   }
+  
+}

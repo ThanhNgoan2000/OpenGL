@@ -1,0 +1,49 @@
+package adjacencyMatrix;
+
+public class UnDirectedGraph extends Graph{
+   private int[][] matrix ;
+   public UnDirectedGraph() {
+   }
+   public void addEdge(Integer u, Integer v) {
+	   matrix[u][v]++;
+	   matrix[v][u]++;
+   }
+   public void printGraph() {
+	   for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++) {
+			System.out.println(matrix[i][j]+" ");
+		}
+		System.out.println();
+	}
+   }
+   public int degree(Integer u) {
+	   int degree = 0;
+	   for (int i = 0; i < matrix.length; i++) {
+		degree+=matrix[u][i];
+	}
+	   return degree;
+   }
+  public void removeEdge(Integer u, Integer v) {
+	  if(matrix[u][v]>0) {
+		  matrix[u][v]--;
+		  matrix[v][u]--;
+	  }
+  }
+
+@Override
+public int numOfEdge() {
+	// TODO Auto-generated method stub
+	 int result = 0;
+	  for (int i = 0; i < matrix.length; i++) {
+		  for (int j = 0; j < matrix.length; j++) {
+			result+= matrix[i][j];
+		}
+	}
+	  return result/2;
+}
+@Override
+public void printAdjList() {
+	// TODO Auto-generated method stub
+	
+}
+}

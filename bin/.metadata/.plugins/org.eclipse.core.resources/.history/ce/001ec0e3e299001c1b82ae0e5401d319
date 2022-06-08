@@ -1,0 +1,52 @@
+package examination;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Test1 {
+   static int countNumberInN(int n){
+	   String s = String.valueOf(n);
+	   return s.length();
+   }
+   static int findReverse(int n) {
+	   StringBuilder rs = new StringBuilder();
+	   rs.append(n);
+	   rs.reverse();
+	  String s =  rs.toString();
+	   return Integer.valueOf(s);
+   } 
+   static boolean amstrongNumber(int n) {
+	   String s = String.valueOf(n);
+	  int sum = 0;
+	  char[] arr = s.toCharArray();
+	   for(int i = 0;i<s.length();i++) {
+		   int a = Integer.valueOf(String.valueOf(arr[i]));
+		   sum += Math.pow(a, s.length());
+	   }
+	   if(sum==n) {
+		   return true;
+	   }
+	   return false;
+   }
+   static boolean amstrong(int n) {
+	   int temp =0;
+	   int sum = 0;
+	   int size =String.valueOf(n).length() ;
+	   while(n>0) {
+		   temp = n%10;
+		   sum +=Math.pow(temp, size);
+		   n = n/10;
+	   }
+	   if( sum== n)
+		   return true;
+	   return false;
+   }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//      System.out.println(countNumberInN( 14237568));
+//      System.out.println(findReverse( 14237568));
+//		System.out.println(amstrongNumber(153));
+		System.out.println(amstrong(153));
+	}
+
+}

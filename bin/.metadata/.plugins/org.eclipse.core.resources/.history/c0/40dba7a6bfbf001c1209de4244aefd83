@@ -1,0 +1,11 @@
+package lab3_strategyPartten4;
+
+public class MuteQuack implements QuackBehavior{
+
+	@Override
+	public void quack() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

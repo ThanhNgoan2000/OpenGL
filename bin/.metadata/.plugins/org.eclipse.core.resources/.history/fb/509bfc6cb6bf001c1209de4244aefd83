@@ -1,0 +1,5 @@
+package lab3_strategyPartten;
+
+public abstract class Duck {
+
+}

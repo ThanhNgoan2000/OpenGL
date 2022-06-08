@@ -1,0 +1,33 @@
+package lab3_VideoRental;
+
+import java.time.LocalDate;
+
+public class RentItems {
+  private Movie movie;
+  private Date startDate;
+  public RentItems() {
+	// TODO Auto-generated constructor stub
+}
+public RentItems(Movie movie, Date startDate) {
+	super();
+	this.movie = movie;
+	this.startDate = startDate;
+}
+public Movie getMovie() {
+	return movie;
+}
+public Date getStartDate() {
+	return startDate;
+}
+//  public int getRentDay() {
+//	  LocalDate date = LocalDate.now();
+//	  date.
+//	  return date-getStartDate();
+//  }
+ public static void main(String[] args) {
+	LocalDate l = LocalDate.now();
+	System.out.println(l.getDayOfMonth());
+	System.out.println(l.getDayOfWeek());
+	System.out.println(l.getDayOfYear());
+}
+}

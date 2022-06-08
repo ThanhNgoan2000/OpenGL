@@ -1,0 +1,29 @@
+package lab3_VideoRental;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+public class RentItems {
+  private Movie movie;
+  private Date startDate;
+  public RentItems() {
+	// TODO Auto-generated constructor stub
+}
+public RentItems(Movie movie, Date startDate) {
+	super();
+	this.movie = movie;
+	this.startDate = startDate;
+}
+public Movie getMovie() {
+	return movie;
+}
+public Date getStartDate() {
+	return startDate;
+}
+  public int getRentDay() {
+	  LocalDate lDate = LocalDate.now();
+	  Date rDate = getStartDate();
+	  return Math.abs(lDate.getDayOfMonth()-rDate.getDay())+(lDate.getMonthValue()-rDate.getMonth())*
+  }
+
+}

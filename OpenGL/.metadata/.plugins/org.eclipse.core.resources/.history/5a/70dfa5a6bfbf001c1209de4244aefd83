@@ -1,0 +1,17 @@
+package lab3_strategyPartten4;
+
+public abstract class Duck {
+	private FlyBehavior flybehavior;
+	private QuackBehavior quackbehavior;
+	  public Duck() {
+		// TODO Auto-generated constructor stub
+		
+	}
+public  void quack() {
+	System.out.println("Quack quack");
+}
+public  void swim() {
+	System.out.println("I am swimming");
+}
+public abstract void display();
+}

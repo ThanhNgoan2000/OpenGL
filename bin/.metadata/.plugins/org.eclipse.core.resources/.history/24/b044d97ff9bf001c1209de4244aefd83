@@ -1,0 +1,17 @@
+package lab3_VideoRental;
+
+public class ChildrenPrice implements PriceStrategy{
+
+	@Override
+	public double getCharge(int rentDays) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getFrequentRenterPoints(int rentDays) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

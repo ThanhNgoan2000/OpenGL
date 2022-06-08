@@ -1,0 +1,32 @@
+package lab3_2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Duck d1 = new MallardDuck();
+        Duck d2 = new RedHeadDuck();
+        Duck d3 = new RubberDuck();
+        Duck d4 = new DecoyDuck();
+        
+        d1.quack();
+        d1.display();
+        d1.swim();
+        System.out.println("------------------");
+        
+        d2.quack();
+        d2.display();
+        d2.swim();
+        System.out.println("------------------");
+        d3.quack();
+        d3.display();
+        d3.swim();
+        System.out.println("------------------");
+        d4.quack();
+        d4.display();
+        d4.swim();
+        
+        
+  	}
+
+}

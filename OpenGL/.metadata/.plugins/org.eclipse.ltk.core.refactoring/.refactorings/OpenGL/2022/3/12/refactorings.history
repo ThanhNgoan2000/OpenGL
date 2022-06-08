@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;gpl/gpl&apos; to &apos;jgl&apos;" description="Rename resource &apos;gpl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="gpl" name="jgl" stamp="1647526442927" updateReferences="true"/>
+</session>

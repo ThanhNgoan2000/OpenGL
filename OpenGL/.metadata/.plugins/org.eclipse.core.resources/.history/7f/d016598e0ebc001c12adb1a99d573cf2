@@ -1,0 +1,18 @@
+package test;
+
+import adjacencyList.Graph;
+import adjacencyList.UnDirectedGraph;
+
+public class TestUnDirectedGraph {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String path = new String("data1.txt");
+   Graph graph = new UnDirectedGraph();
+   graph.loadData(path);
+   graph.printMatrix(graph.arr);
+   graph.addEdge(2, 1);
+   graph.printMatrix(graph.arr);
+	}
+
+}
